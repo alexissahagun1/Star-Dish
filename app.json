@@ -1,27 +1,44 @@
 {
   "expo": {
-    "name": "star-dish",
+    "name": "Star Dish",
     "slug": "star-dish",
+    "scheme": "stardish",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "plugins": [],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.stardish.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Star Dish uses your location to show nearby restaurants and their star dishes.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Star Dish uses your location to show nearby restaurants and their star dishes."
+      }
     },
     "android": {
+      "package": "com.stardish.app",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#ffffff"
       },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY_HERE"
+        }
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
